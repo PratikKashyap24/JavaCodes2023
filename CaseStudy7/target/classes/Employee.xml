@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- <bean id="emp1"
+		class="com.dxc.model.Employee" 
+		scope="singleton"
+		init-method="onCreate"
+		destroy-method="onDestroy"
+		>
+	</bean>
+<bean id="dept1"
+		class="com.dxc.model.Department" 
+		scope="singleton"
+		init-method="onCreate"
+		destroy-method="onDestroy"
+		>
+	</bean>
+<bean id="comp1"
+		class="com.dxc.model.Company" 
+		scope="singleton"
+		init-method="onCreate"
+		destroy-method="onDestroy"
+		>
+	</bean> -->
+
+<bean id="emp1"
+		class="com.dxc.model.Employee" 
+		scope="singleton"
+		init-method="onCreate"
+		destroy-method="onDestroy"
+		>
+		<property name="empId" value="101"></property>
+		<property name="empName" value="Pratik Kashyap"></property>
+		<property name="gender" value="Male"></property>
+		<property name="compId" value="1021"></property>
+	</bean>
+
+<bean id="dept1"
+		class="com.dxc.model.Department" 
+		scope="singleton"
+		init-method="onCreate"
+		destroy-method="onDestroy"
+		>
+		<property name="deptName" value="GLIC"></property>
+		<property name="deptId" value="1021"></property>
+		<property name="empId" value="101"></property>
+	</bean>
+	<bean id="comp1"
+		class="com.dxc.model.Company" 
+		scope="singleton"
+		init-method="onCreate"
+		destroy-method="onDestroy"
+		>
+		<!-- <property name="compId" value="13213"></property>
+			<property name="compName" value="DXC"></property> -->
+			<constructor-arg name="compId" value="13213" ></constructor-arg>
+			<constructor-arg name="compName" value="DXC"></constructor-arg>
+	</bean>
+	
+</beans>
